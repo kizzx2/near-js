@@ -16,6 +16,8 @@ export default [
       "near-api-js/lib/transaction",
       "near-api-js/lib/signer",
     ],
-    plugins: [resolve(), cjs(), json(), typescript()],
+    plugins: [resolve({
+      preferBuiltins: false
+    }), cjs(), json(), typescript()],
   },
 ];
