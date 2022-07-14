@@ -26,7 +26,7 @@
     "@types/bs58": "^4.0.1",
     "@types/jest": "^26.0.24",
     "jest": "^27.0.6",
-    "near-api-js": "^0.42.0",
+    "near-api-js": "^0.44.2",
     "rollup": "^2.53.1",
     "ts-jest": "^27.0.3",
     "tslib": "^2.3.0",
@@ -34,7 +34,7 @@
     "typescript": "^4.3.5"
   },
   "peerDependencies": {
-    "near-api-js": "^0.42.0"
+    "near-api-js": "^0.44.2"
   },
   "dependencies": {
     "bs58": "^4.0.1"
