@@ -82,7 +82,9 @@ export class KeyStoreTransactionCreator implements TransactionCreator {
     this.networkId = networkId;
     this.keyStore = keyStore;
 
-    this.provider = provider || new JsonRpcProvider(nodeUrl);
+    this.provider = provider || new JsonRpcProvider({
+      url: nodeUrl!
+    });
   }
 
   /**
@@ -107,7 +109,7 @@ export class KeyStoreTransactionCreator implements TransactionCreator {
       actions,
       publicKey,
       signerId: this.signerId,
-      nonce: nonce + nonceOffset,
+      nonce: nonce.addn(nonceOffset),
       blockHash: bs58.decode(block_hash),
     });
   }
